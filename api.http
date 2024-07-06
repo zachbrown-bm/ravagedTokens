@@ -1,0 +1,18 @@
+// root "default" request.
+### RootRquest
+GET localhost:3010
+
+### Get tokens
+GET localhost:3010/token
+
+### Get token
+< {%
+    request.variables.set("tokenId", "100")
+%}
+GET localhost:3010/token/{{tokenId}}
+
+### Delete token.
+< {%
+    request.variables.set("tokenId", "100")
+%}
+DELETE localhost:3010/token/{{tokenId}}
