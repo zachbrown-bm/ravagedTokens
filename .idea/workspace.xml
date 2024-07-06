@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="211aa807-c166-45da-b114-8fe2013f841f" name="Changes" comment="" />
+    <list default="true" id="211aa807-c166-45da-b114-8fe2013f841f" name="Changes" comment="Add nixpacks config that will add additional curl package during deploy for health checks.">
+      <change afterPath="$PROJECT_DIR$/handlers/rootHandlers.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/masters/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,9 +32,6 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HttpClientSelectedEnvironments">
-    <file url="file:///tmp/whats-new-dir/whats-new.http" environment="test" />
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -40,6 +43,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "DefaultGoTemplateProperty": "Go File",
     "HTTP Request.All in api.executor": "Run",
     "HTTP Request.api | Delete token..executor": "Run",
@@ -60,7 +64,7 @@
     "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog"
   }
 }]]></component>
-  <component name="RunManager" selected="HTTP Request.All in api">
+  <component name="RunManager" selected="HTTP Request.api | RootRquest">
     <configuration name="All in api" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/api.http">
       <method v="2" />
     </configuration>
@@ -78,10 +82,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.api | RootRquest" />
         <item itemvalue="HTTP Request.All in api" />
         <item itemvalue="HTTP Request.api | Get token" />
         <item itemvalue="HTTP Request.api | Get tokens" />
-        <item itemvalue="HTTP Request.api | RootRquest" />
         <item itemvalue="HTTP Request.api | Delete token." />
       </list>
     </recent_temporary>
@@ -128,7 +132,8 @@
     <MESSAGE value="Add a few stubs for crud operations on token." />
     <MESSAGE value="Added http endpoint test file." />
     <MESSAGE value="Workspace config update to clear commit message on commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Workspace config update to clear commit message on commit" />
+    <MESSAGE value="Add nixpacks config that will add additional curl package during deploy for health checks." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add nixpacks config that will add additional curl package during deploy for health checks." />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
