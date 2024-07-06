@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empty HTML Document</title>
+
+    <style>
+        html, body {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        body { display: flex; flex-direction: column; }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 50px;
+            background: darkcyan;
+            color: white;
+        }
+        .content { flex: 1; }
+        footer {
+            min-height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .8em;
+            color: white;
+            background: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>{{.PageTitle}}</h1>
+    </header>
+
+    <div class="content"></div>
+
+    <footer>
+        {{.Date}}
+    </footer>
+</body>
+</html>

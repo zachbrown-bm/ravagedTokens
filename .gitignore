@@ -21,5 +21,13 @@
 go.work
 go.work.sum
 
+# JetBrains IDE files (Goland, etc)
+# User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+
 # HTTP API Test Output
 .idea/httpRequests

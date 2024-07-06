@@ -14,9 +14,7 @@ func main() {
 	router := chi.NewRouter()
 	router.Use(middleware.Logger)
 
-	router.Get("/", func(w http.ResponseWriter, r *http.Request) {
-		_, _ = w.Write([]byte("you found the root, congrats."))
-	})
+	router.Get("/", handlers.RootHandler)
 
 	router.Route("/token", handlers.TokenHandlers)
 
