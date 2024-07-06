@@ -9,6 +9,8 @@ import (
 )
 
 func main() {
+	serverPort := ":3010"
+
 	router := chi.NewRouter()
 	router.Use(middleware.Logger)
 
@@ -18,7 +20,8 @@ func main() {
 
 	router.Route("/token", handlers.TokenHandlers)
 
-	err := http.ListenAndServe(":3010", router)
+	fmt.Printf("Starting server on port: %s\n", serverPort)
+	err := http.ListenAndServe(serverPort, router)
 	if err != nil {
 		fmt.Println(err)
 	}
