@@ -7,12 +7,19 @@ import (
 )
 
 func TokenHandlers(r chi.Router) {
-	r.Get("/", getToken)
+	r.Get("/", getTokens)
+
+	r.Get("/{tokenId}", getToken)
 	r.Delete("/{tokenId}", deleteToken)
 }
 
+func getTokens(w http.ResponseWriter, _ *http.Request) {
+	w.Write([]byte(fmt.Sprint("Here's a list of tokens")))
+}
+
 func getToken(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte(fmt.Sprint("Here's a Token")))
+	tokenId := chi.URLParam(r, "tokenId")
+	w.Write([]byte(fmt.Sprintf("Here's token: %s'", tokenId)))
 }
 
 func deleteToken(w http.ResponseWriter, r *http.Request) {
