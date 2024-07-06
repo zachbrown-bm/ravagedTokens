@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="211aa807-c166-45da-b114-8fe2013f841f" name="Changes" comment="Added http endpoint test file." />
+    <list default="true" id="211aa807-c166-45da-b114-8fe2013f841f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -127,7 +127,8 @@
     <MESSAGE value="Added &quot;Starting server&quot; message and port is now a variable." />
     <MESSAGE value="Add a few stubs for crud operations on token." />
     <MESSAGE value="Added http endpoint test file." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added http endpoint test file." />
+    <MESSAGE value="Workspace config update to clear commit message on commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Workspace config update to clear commit message on commit" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
