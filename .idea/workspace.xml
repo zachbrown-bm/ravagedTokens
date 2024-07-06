@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="211aa807-c166-45da-b114-8fe2013f841f" name="Changes" comment="Add a few stubs for crud operations on token.">
-      <change afterPath="$PROJECT_DIR$/api.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="211aa807-c166-45da-b114-8fe2013f841f" name="Changes" comment="Added http endpoint test file." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,7 +57,7 @@
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog"
   }
 }]]></component>
   <component name="RunManager" selected="HTTP Request.All in api">
@@ -126,10 +122,12 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Initial commit." />
     <MESSAGE value="Added &quot;Starting server&quot; message and port is now a variable." />
     <MESSAGE value="Add a few stubs for crud operations on token." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add a few stubs for crud operations on token." />
+    <MESSAGE value="Added http endpoint test file." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added http endpoint test file." />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
