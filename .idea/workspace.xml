@@ -11,6 +11,8 @@
       <change afterPath="$PROJECT_DIR$/html/components/user.gohtml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/makefile" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/models/user.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/htmx.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/ravagedTokens.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ravagedTokens.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api.http" beforeDir="false" afterPath="$PROJECT_DIR$/api.http" afterDir="false" />
