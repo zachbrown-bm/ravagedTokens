@@ -1,0 +1,29 @@
+{{define "user"}}
+  <style>
+    .user {
+      display: inline-flex;
+      flex-direction: column;
+      border: solid 1px darkgray;
+      border-radius: 6px;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+
+    .user:hover {
+      background: lightpink;
+      cursor: pointer;
+    }
+  </style>
+
+  <div class="user" hx-get="/destroyUser" hx-swap="outerHTML">
+    <div class="user-name">
+      {{.Name}}
+    </div>
+    <div class="user-email">
+      {{.Email}}
+    </div>
+    <div class="user-type">
+      {{.Type}}
+    </div>
+  </div>
+{{end}}

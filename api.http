@@ -16,3 +16,6 @@ GET localhost:3010/token/{{tokenId}}
     request.variables.set("tokenId", "100")
 %}
 DELETE localhost:3010/token/{{tokenId}}
+
+### Destroy User.
+GET localhost:3010/destroyUser

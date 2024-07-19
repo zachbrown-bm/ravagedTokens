@@ -5,10 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="211aa807-c166-45da-b114-8fe2013f841f" name="Changes" comment="Add nixpacks config that will add additional curl package during deploy for health checks.">
-      <change afterPath="$PROJECT_DIR$/handlers/rootHandlers.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/masters/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/usermanager/usermanager.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/handlers/userHandlers.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/components/user.gohtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ravagedTokens.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ravagedTokens.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api.http" beforeDir="false" afterPath="$PROJECT_DIR$/api.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/rootHandlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/rootHandlers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/masters/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/index.gohtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,11 +26,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Go File" />
       </list>
     </option>
   </component>
-  <component name="GOROOT" url="file://$USER_HOME$/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.22.4.linux-amd64" />
+  <component name="GOROOT" url="file:///usr/local/go" />
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -44,9 +52,12 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "DefaultGoTemplateProperty": "Go File",
+    "DefaultHtmlFileTemplate": "HTML File",
     "HTTP Request.All in api.executor": "Run",
     "HTTP Request.api | Delete token..executor": "Run",
+    "HTTP Request.api | Destroy User..executor": "Run",
     "HTTP Request.api | Get token.executor": "Run",
     "HTTP Request.api | Get tokens.executor": "Run",
     "HTTP Request.api | RootRquest.executor": "Run",
@@ -55,20 +66,28 @@
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
     "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "go.import.settings.migrated": "true",
-    "last_opened_file_path": "/home/zach/dev/ravagedTokens",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "/Users/zach.brown/dev/ravagedTokens",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog"
   }
 }]]></component>
-  <component name="RunManager" selected="HTTP Request.api | RootRquest">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$/framework/usermanager" />
+    </key>
+  </component>
+  <component name="RunManager" selected="HTTP Request.api | Destroy User.">
     <configuration name="All in api" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/api.http">
       <method v="2" />
     </configuration>
-    <configuration name="api | Delete token." type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/api.http" index="2" requestIdentifier="Delete token." runType="Run single request">
+    <configuration name="api | Destroy User." type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/api.http" index="5" requestIdentifier="Destroy User." runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="api | Get token" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/api.http" index="3" requestIdentifier="Get token" runType="Run single request">
@@ -82,19 +101,19 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.api | Destroy User." />
         <item itemvalue="HTTP Request.api | RootRquest" />
         <item itemvalue="HTTP Request.All in api" />
         <item itemvalue="HTTP Request.api | Get token" />
         <item itemvalue="HTTP Request.api | Get tokens" />
-        <item itemvalue="HTTP Request.api | Delete token." />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-gosdk-33c477a475b1-e0158606a674-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-241.17011.92" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-GO-241.17011.92" />
+        <option value="bundled-gosdk-33c477a475b1-e0158606a674-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-241.18034.61" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-GO-241.18034.61" />
       </set>
     </attachedChunks>
   </component>
