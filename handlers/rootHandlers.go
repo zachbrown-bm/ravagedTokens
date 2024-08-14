@@ -2,14 +2,14 @@ package handlers
 
 import (
 	"fmt"
+	"github.com/labstack/echo/v4"
 	"html/template"
 	"log"
-	"net/http"
 	"ravagedTokens/framework/usermanager"
 	"time"
 )
 
-func RootHandler(w http.ResponseWriter, _ *http.Request) {
+func RootHandler(c echo.Context) error {
 	currentUser := usermanager.GetCurrent()
 	data := map[string]interface{}{
 		"PageTitle": "Welcome to Ravaged Tokens",
@@ -22,12 +22,14 @@ func RootHandler(w http.ResponseWriter, _ *http.Request) {
 	tmpl, err := template.New("").ParseGlob("html/**/*.gohtml")
 	if err != nil {
 		log.Println("Error parsing templates", err)
-		return
+		return err
 	}
 
 	// executing template named "homepage"
-	if err := tmpl.ExecuteTemplate(w, "index", data); err != nil {
+	if err := tmpl.ExecuteTemplate(c.Response().Writer, "index", data); err != nil {
 		fmt.Println("Error executing template for root handler.", err)
-		return
+		return err
 	}
+
+	return nil
 }

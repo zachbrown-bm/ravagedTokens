@@ -1,30 +1,29 @@
 package main
 
 import (
-	"fmt"
-	"github.com/go-chi/chi/v5"
-	"github.com/go-chi/chi/v5/middleware"
-	"net/http"
+	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
 	"ravagedTokens/handlers"
 )
 
 func main() {
 	serverPort := ":3010"
 
-	router := chi.NewRouter()
-	router.Use(middleware.Logger)
+	e := echo.New()
+	e.Pre(middleware.RemoveTrailingSlash())
 
-	fs := http.FileServer(http.Dir("static"))
-	router.Handle("/static/*", http.StripPrefix("/static/", fs))
+	e.GET("/", handlers.RootHandler)
 
-	router.Get("/", handlers.RootHandler)
+	tokens := e.Group("/token")
+	tokens.GET("/", handlers.GetTokens)
+	tokens.GET("/:tokenId", handlers.GetToken)
+	tokens.DELETE("/:tokenId", handlers.DeleteToken)
 
-	router.Route("/token", handlers.TokenHandlers)
-	router.Get("/destroyUser", handlers.DestroyUserHandler)
+	// user := e.Group("/user")
+	// user.DELETE("/{userId}", handlers.DestroyUserHandler)
+	e.DELETE("/user/:userId", handlers.DestroyUserHandler)
 
-	fmt.Printf("Starting server on port: %s\n", serverPort)
-	err := http.ListenAndServe(serverPort, router)
-	if err != nil {
-		fmt.Println(err)
-	}
+	e.Static("/static", "static")
+
+	e.Logger.Fatal(e.Start(serverPort))
 }

@@ -2,27 +2,34 @@ package handlers
 
 import (
 	"fmt"
-	"github.com/go-chi/chi/v5"
-	"net/http"
+	"github.com/labstack/echo/v4"
 )
 
-func TokenHandlers(r chi.Router) {
-	r.Get("/", getTokens)
+func GetTokens(c echo.Context) error {
+	_, err := c.Response().Write([]byte(fmt.Sprint("Here's a list of tokens")))
+	if err != nil {
+		return err
+	}
 
-	r.Get("/{tokenId}", getToken)
-	r.Delete("/{tokenId}", deleteToken)
+	return nil
 }
 
-func getTokens(w http.ResponseWriter, _ *http.Request) {
-	w.Write([]byte(fmt.Sprint("Here's a list of tokens")))
+func GetToken(c echo.Context) error {
+	tokenId := c.Param("tokenId")
+	_, err := c.Response().Write([]byte(fmt.Sprintf("Here's token: %s", tokenId)))
+	if err != nil {
+		return err
+	}
+
+	return nil
 }
 
-func getToken(w http.ResponseWriter, r *http.Request) {
-	tokenId := chi.URLParam(r, "tokenId")
-	w.Write([]byte(fmt.Sprintf("Here's token: %s'", tokenId)))
-}
+func DeleteToken(c echo.Context) error {
+	tokenId := c.Param("tokenId")
+	_, err := c.Response().Write([]byte(fmt.Sprintf("Removed Token: %s", tokenId)))
+	if err != nil {
+		return err
+	}
 
-func deleteToken(w http.ResponseWriter, r *http.Request) {
-	tokenId := chi.URLParam(r, "tokenId")
-	w.Write([]byte(fmt.Sprintf("Removed Token: %s", tokenId)))
+	return nil
 }

@@ -9,15 +9,19 @@
       box-sizing: border-box;
     }
 
+    .user .user-id {
+      font-size: 10pt;
+    }
+
     .user:hover {
       background: lightpink;
       cursor: pointer;
     }
   </style>
 
-  <div class="user" hx-get="/destroyUser" hx-swap="outerHTML">
+  <div class="user" hx-delete="/user/{{.Id}}" hx-swap="outerHTML">
     <div class="user-name">
-      {{.Name}}
+      {{.Name}} <span class="user-id">({{.Id}})</span>
     </div>
     <div class="user-email">
       {{.Email}}
